@@ -1,0 +1,45 @@
+<div class="play-list-body">
+    <ul class="play-list-table-header">
+        <li><i class="uil uil-clock-eight"> Heroe</i></li>
+        <li><i class="uil uil-clock-eight"> Ciudad</i></li>
+        <li><i class="uil uil-clock-eight"> Condicion</i></li>
+        <li><i class="uil uil-clock-eight"> Habilidades</i></li>
+        <li><i class="uil uil-clock-eight"> Updated</i></li>
+    </ul>
+    <!-- |orderList:optionSort.property:optionSort.order -->
+    <ul class="play-list-rows" *ngFor="let mutants of mutants">
+        <li class="track-name">
+            {{mutants.name}}
+            <!-- <ng-container *ngTemplateOutlet="coverSection;context:{mutants:mutants}"></ng-container> -->
+        </li>
+        <li class="track-name-opacity">
+            {{mutants.city}}
+        </li>
+        <li class="track-name-opacity">
+            {{mutants.condition}}
+        </li>
+        <li class="track-name-opacity">
+            {{mutants.abilities}}
+        </li>
+        <li class="track-name-opacity">
+            <button class="btn" (click)="updateMutant(mutants._id,mutants.name,mutants.city)"><i class="uil uil-file-edit-alt">Editar</i></button>
+        </li>
+
+    </ul>
+</div>
+
+<!--template del cover-->
+<!-- <ng-template #coverSection let-mutants="mutants">
+    <div class="cover-section">
+        <img appImgBroken [customImg]="'https://yt3.ggpht.com/ytc/AMLnZu8pJTWJOEFHyPsqCcU50Z7J6CBNh-GtIrK__FQRGg=s900-c-k-c0x00ffffff-no-rj'" class="cover-track" [src]="mutants.imagen.url" [alt]="mutants.name">
+        <div class="cover-info">
+            <div class="name-track">{{mutants.name}}</div>
+        </div>
+    </div>
+
+</ng-template> -->
+
+
+
+<!-- (click)="changeSort('city')"
+(click)="changeSort('name')" -->

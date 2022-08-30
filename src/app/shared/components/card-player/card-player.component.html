@@ -1,0 +1,29 @@
+
+<div *ngIf="mode==='small'" class="card-player player-small">
+    <img appImgBroken [customImg]="'https://yt3.ggpht.com/ytc/AMLnZu8pJTWJOEFHyPsqCcU50Z7J6CBNh-GtIrK__FQRGg=s900-c-k-c0x00ffffff-no-rj'" [src]="mutants.imagen.url" [alt]="mutants.name" class="cover">
+    <div class="content-player">
+        {{mutants.name}}
+    </div>
+    <div class="buttons-player">
+        <button (click)="sendPlay(mutants)" *ngIf="true" class="play-btn">
+            <i class="uil " [ngClass]="{'uil-play':true}"></i>
+        </button>
+        <button *ngIf="false" class="play-btn">
+            <i class="uil uil-play"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Diseño del mode (big)-->
+<div *ngIf="mode==='big'" class="card-player player-big">
+    <img appImgBroken [customImg]="'https://yt3.ggpht.com/ytc/AMLnZu8pJTWJOEFHyPsqCcU50Z7J6CBNh-GtIrK__FQRGg=s900-c-k-c0x00ffffff-no-rj'" [src]="mutants.imagen.url" alt="" class="cover">
+    <div class="content-player">
+        <div class="title-track">Heroe: {{mutants.name}}</div>
+        <ul>
+             <li class="sub-title-track">Condición: {{mutants.condition}}</li>
+             <li class="sub-title-track">Ciudad: {{mutants.city}}</li>
+             <li class="sub-title-track">Habilidades: {{mutants.abilities}},{{mutants.abilities2}},{{mutants.abilities3}}</li>
+             <li class="sub-title-track">Vehiculo: {{mutants.vehiculo.name}}</li>
+        </ul>
+    </div>
+</div>

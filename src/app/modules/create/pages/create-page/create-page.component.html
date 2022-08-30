@@ -1,0 +1,66 @@
+<div class="login-auth-page">
+    <div class="login-auth-wrapper">
+        <h3>Crea un heroe/villano.</h3>
+        <div class="separator"></div>
+        <form class="login-auth-form"(ngSubmit)="sendHero()" [formGroup]="formRegister">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input formControlName="name"  type="text" placeholder="Super Hero or villain" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="rol">Rol</label>
+                <select  formControlName="rol" id="rol" class="form-input">
+                    <option value="hero">Hero</option>
+                    <option value="villan">Villain</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="city">Ciudad de operacion</label>
+                <input formControlName="city" type="text" placeholder="city" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="condition">Condición</label>
+                <select class="form-input" formControlName="condition" id="condition">
+                    <option value="imprisoned">imprisoned</option>
+                    <option value="free">free</option>
+                    <option value="unknown">unknown</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="abilities">Coloca la habilidad de tu mutante</label>
+                <input formControlName="abilities" type="text" placeholder="Colocala aquí" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="abilities">¿Tu mutante tiene mas de una habilidad?</label>
+                <input formControlName="abilities2" type="text" placeholder="Colocala aquí" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="abilities">¿Tu mutante tiene mas de dos habilidades?</label>
+                <input formControlName="abilities3" type="text" placeholder="Colocala Aquí" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="vehiclesId">ID del vehiculo</label>
+                <input formControlName="vehiclesId" type="text" placeholder="vehicles" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="mediaId">Imagen</label>
+                <input formControlName="mediaId" type="text" placeholder="picture" class="form-input">
+            </div>
+            <div *ngIf="errorCreate">
+                Ocurrio un error al crear mutante
+            </div>
+            <div *ngIf="successCreate">
+                Mutante Creado con Exito
+            </div>
+            <div class="form-action">
+                <button  class="login social-btn">Crear Mutante</button>
+            </div>
+        </form>
+        <div>
+            <!-- <hr>
+            Invalide: {{formLogin.invalid}}
+            <br>
+            Valide: {{formLogin.valid}} -->
+        </div>
+    </div>
+</div>

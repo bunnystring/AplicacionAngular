@@ -1,0 +1,22 @@
+<div class="play-list-body">
+    <ul class="play-list-table-header">
+        <li><i class="uil uil-clock-eight"> Vehiculo</i></li>
+        <li><i class="uil uil-clock-eight"> Tipo</i></li>
+        <li><i class="uil uil-clock-eight"> Id</i></li>
+    </ul>
+    <!-- |orderList:optionSort.property:optionSort.order -->
+    <ul class="play-list-rows" *ngFor="let vehicle of dataVehicles"> 
+        <li class="track-name uil uil-car-sideview">
+            {{vehicle.name}}
+            <!-- <ng-container *ngTemplateOutlet="coverSection;context:{mutants:mutants}"></ng-container> -->
+        </li>
+        <li class="track-name-opacity">
+            {{vehicle.type}}
+        </li>
+        <li class="track-name-opacity">
+            {{vehicle._id}}
+        </li>
+       
+
+    </ul>
+</div>

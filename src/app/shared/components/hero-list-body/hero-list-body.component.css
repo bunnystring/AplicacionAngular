@@ -1,0 +1,100 @@
+.play-list-body {
+    padding: 1rem 2rem;
+}
+
+.play-list-table-header {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    letter-spacing: 1px;
+    border-bottom: solid 1px var(--color-2);
+    padding-bottom: .5rem;
+}
+
+.play-list-table-header li {
+
+    text-transform: uppercase;
+    color: var(--color-4);
+    opacity: .7;
+}
+
+.play-list-rows {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+    margin: 0;
+    padding: 1rem 0 0 0;
+}
+
+.play-list-rows .track-name-opacity {
+    opacity: .7;
+    font-weight: 300;
+}
+
+.cover-section {
+    display: flex;
+    padding: 0
+}
+
+.cover-section .cover-track {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.cover-section .cover-info {
+    padding: 0 1rem;
+}
+
+.cover-section .cover-info .name-track-details {
+    font-size: 80%;
+    opacity: .7;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400px;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.btn:hover {
+    letter-spacing: 3px;
+    background: #fbff1f;
+    box-shadow: 0 0 5px #fbff1f, 0 0 15px #fbff1f, 0 0 30px #fbff1f,
+        0 0 60px #fbff1f;
+        cursor: pointer;
+
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+}

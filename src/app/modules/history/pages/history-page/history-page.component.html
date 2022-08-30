@@ -1,0 +1,4 @@
+<div class="history-page">
+    <app-search (callbackData)="receiveData($event)"></app-search>
+    <app-hero-list-body [mutants]="listResults$ | async"></app-hero-list-body>
+</div>

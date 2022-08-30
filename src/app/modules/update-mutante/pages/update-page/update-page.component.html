@@ -1,0 +1,31 @@
+<div class="login-auth-page">
+    <div class="login-auth-wrapper">
+        <h3>Actualiza un heroe/villano.</h3>
+        <div class="separator"></div>
+        <form class="login-auth-form"(ngSubmit)="sendUpdate()" [formGroup]="formUpdate">
+            <div class="form-group">
+                <label for="_id">iD</label>
+                <input formControlName="_id"   type="text"   class="form-input" [readonly]="true">
+            </div>
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input formControlName="name"  type="text"    class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="city">Ciudad de operacion</label>
+                <input formControlName="city"  type="text"   class="form-input">
+            </div>
+            <div *ngIf="errorCreate">
+                Ocurrio un error al actualizar mutante
+            </div>
+            <div *ngIf="successCreate">
+                Mutante actualizado con Exito
+            </div>
+            <div class="form-action">
+                <button  class="login social-btn">Actualizar Mutante</button>
+            </div>
+        </form>
+        <div>
+        </div>
+    </div>
+</div>
